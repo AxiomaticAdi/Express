@@ -1,7 +1,11 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
 
 const app = express();
 const PORT = 3000;
+
+// Use cors middleware to enable CORS
+app.use(cors());
 
 // Define a route handler for the default home page
 app.get("/", (req: Request, res: Response) => {
